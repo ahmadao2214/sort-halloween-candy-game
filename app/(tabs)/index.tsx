@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     backgroundColor: 'purple',
-    borderBottomWidth: 30,
+    borderBottomWidth: 31,
     borderBottomColor: 'black',
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
