@@ -10,7 +10,12 @@ jobs:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
       - run:
-          name: Install Dependencies
+          name: Install Yarn
+          command: | 
+            brew install yarn
+            yarn --version
+      - run:
+          name: Install Yarn
           command: yarn install
       - run:
           name: Run tests!
