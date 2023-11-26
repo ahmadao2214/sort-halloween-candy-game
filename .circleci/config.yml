@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@4.7
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+  tutorialWorkflow:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - node/test:
@@ -12,4 +12,4 @@ workflows:
           # https://circleci.com/developer/images/image/cimg/node
           version: '21.2.0'
           # If you are using yarn, change the line below from "npm" to "yarn"
-          pkg-manager: npm
+          pkg-manager: bun
