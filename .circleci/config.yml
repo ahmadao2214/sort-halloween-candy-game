@@ -11,7 +11,7 @@ jobs:
             echo 'This is the delivery pipeline'
       - run:
           name: Install Dependencies
-          command: npm install
+          command: yarn install
       - run:
           name: Run tests!
-          command: npm run test
+          command: yarn test
