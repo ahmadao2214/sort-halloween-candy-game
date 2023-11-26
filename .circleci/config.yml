@@ -1,22 +1,15 @@
 version: 2.1
-jobs:
-  build:
-    docker:
-      - image: alpine:3.15
-    steps:
-      - run:
-          name: The First Step
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-      - run:
-          name: Install Yarn
-          command: | 
-            brew install yarn
-            yarn --version
-      - run:
-          name: Install Yarn
-          command: yarn install
-      - run:
-          name: Run tests!
-          command: yarn test
+orbs:
+  node: circleci/node@4.7
+# See: https://circleci.com/docs/configuration-reference/#workflows
+workflows:
+  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      - node/test:
+          # This is the node version to use for the `cimg/node` tag
+          # Relevant tags can be found on the CircleCI Developer Hub
+          # https://circleci.com/developer/images/image/cimg/node
+          version: 'v21.2.0'
+          # If you are using yarn, change the line below from "npm" to "yarn"
+          pkg-manager: npm
