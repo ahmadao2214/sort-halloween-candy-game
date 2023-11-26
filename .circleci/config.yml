@@ -3,13 +3,13 @@ orbs:
   node: circleci/node@4.7
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  tutorialWorkflow:
+  tutorial:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - node/test:
+      - yarn/test:
           # This is the node version to use for the `cimg/node` tag
           # Relevant tags can be found on the CircleCI Developer Hub
           # https://circleci.com/developer/images/image/cimg/node
           version: '21.2.0'
           # If you are using yarn, change the line below from "npm" to "yarn"
-          pkg-manager: bun
+          pkg-manager: yarn
