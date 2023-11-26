@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@4.7
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  tutorial:
+  sample:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - yarn/test:
